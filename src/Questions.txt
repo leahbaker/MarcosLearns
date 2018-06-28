@@ -1,0 +1,2 @@
+1 .- I don't fully understand how to run tests in the console. 
+2.- I don't know how to run stuff outside the console (can I?)
