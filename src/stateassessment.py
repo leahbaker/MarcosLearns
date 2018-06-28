@@ -28,7 +28,7 @@ CURRENT_FIXED_WIDTH_BOX = []
 
 
 #LEAH: First, you want to validate the string's contents. It can be anything, all you know is that it is a string. If the string "passes" your tests, flip VALID to true. Else it can remain false, and then return that value to use in the next method.
-def validate_string(str):
+# def validate_string(str):
     # ok, here we go. Trying to understand what I gotta do with this
     # so I know there's a string somewhere and it's gonna be used in this function. But what do I have to do with it? To be continued next chapter XD
     # from the top of my head, the first thing I think about is that in order to validate something, that something has to look like something else I should stipulate first. So probably this is gonna need to be a boolean. Something like --> if str == my_string, return True.
@@ -42,28 +42,38 @@ def validate_string(str):
     # I'm back. We lost. We're lost. Ralized that PROABLY by 'str' you mean just a regular string and not a type as I said before. And probably this doesn't have to be a boolean. Well, it could be. That depends on what the function will do. If the funcion will only check if a string has a certain format, then it's gonna be a boolean. If it will rearrange the string so as to create a new format, then it's gonna be something else, something a bit more complicated. I need to know that before continuing. 
     # Maybe when you gave the example of the triangle created by numbers and box created by letters you meant that 'L E A H' wasn't a valid string because if we want to make a triangle out of strings, then the string should have an odd number of indexes (actually since indexes are 0-based, it should have an even number of indexes so as to be odd)
     # If you did mean that, then I'll try to write some code cause this is too much commenting:
-    box = None 
-    triangle = None 
+    # box = None 
+    # triangle = None 
     # Ok, now I'm confused again. I want to specify that if the number of indexes in the string is odd and the shape we want is a square, then the string is valid. And if it's even and we want a triangle, then it's valid. Reading this comment maybe I need to make a boolean with 2 needed parameters. I'll just write the code that I'm imagining here:
   # if len(str) % 2 != 0 and   this was code 
     # Maybe if it's a square or a triangle is not that important for our purpose. But it has to be. If it wasn't, then any string would be valid, so that makes no sense. I have to define what makes a square True and a triangle True. Wait, I think I juts realized it. Maybe it's correct having created a None for boz and a None for triangle. This is what I'm thinking:
-    if len(str) % 2 != 0:
-        box == True
-    if len(str) % 2 == 0:
-        triangle == True
-    else:
-        box == False # this makes no sense, and it's probably not correct, I don't know if I can have two variables like
-        triangle == False # this in an else statement. I'm just not deleting code as you told me to.
+    # if len(str) % 2 != 0:
+    #     box == True
+    # if len(str) % 2 == 0:
+    #     triangle == True
+    # else:
+    #     box == False # this makes no sense, and it's probably not correct, I don't know if I can have two variables like
+    #     triangle == False # this in an else statement. I'm just not deleting code as you told me to.
     # return box  -- this was code
     # return triangle -- this was code
     # Continuing with my last comment, I should probably merge box and triangle into one variable, so as to be able to return it (I can't return 2, can I? Maybe I can, I'll try) --> yeah, Python says 'unreachable code', so it won't get to the second return statement :(
     # how bout this?:
     # return box, triange -- (this was code) problem with this is that I will have two results and I only want one. Should change the code a little bit:
-    if box == True or triangle == True:
-        return True
-    else:
+    # if box == True or triangle == True:
+    #     return True
+    # else:
+    #     return False
+# print(validate_string('hello')) # --> this prints False. I don't know if my code is wrong, or if I'm just not getting the basics and therefore my code is just not correctly oriented because of that first important mistake
+
+# ===== 2nd try:
+
+def validate_string(str):
+    if '' in str:
         return False
-print(validate_string('hello')) # --> this prints False. I don't know if my code is wrong, or if I'm just not getting the basics and therefore my code is just not correctly oriented because of that first important mistake
+    else:
+        return True
+# so I basically did what I had done in FirstGo.py. Thinking if there are any other situations (besides spaces) when strings wouldn't be valid ...        
+        
 
 #LEAH: Put your string into a list! Specifically, the final value CURRENT_LIST I have made for you above that starts as an empty list and will hold whatever the current string you are using. One element per list spot. Return the list. I know there are cheat ways to do this, use logic :) Make sure to check the valid boolean first! If the boolean isnt valid, return a print statement that says "Leah is a super mean teacher". Otherwise, return your list (CURRENT_LIST).
 def str_to_list(bool, str):

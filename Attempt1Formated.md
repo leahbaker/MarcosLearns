@@ -13,7 +13,7 @@
 
 ##### 2: so I know there's a string somewhere and it's gonna be used in this function. But what do I have to do with it? To be continued next chapter XD
 *Good thinking. You got this far. You realize that theres a string SOMEWHERE that you have to do SOMETHING with in this function. You know its being passed into the function as a parameter. So, youve hit your first blocker. You dont know what this string is, where it come from, or what the heck to do with it. So... lets start out just printing it!*
-###### TODO #1: Fill in function at the bottom of the file to print out the string in question so you can see what it is to demystify it a little. Do this before moving on, and ONLY do this. Dont look past it, just look at one, get one working, and come back here :) 
+###### TODO #1: Fill in function in FirstGo.py and print out the string in question so you can see what it is to demystify it a little. Do this before moving on, and ONLY do this. Dont look past it, just look at one, get one working, and come back here :) 
 
 
 ##### 3: from the top of my head, the first thing I think about is that in order to validate something, that something has to look like something else I should stipulate first. So probably this is gonna need to be a boolean. Something like --> if str == my_string, return True.
