@@ -5,6 +5,8 @@
 # ========================
 
 #### TODO #1: Where are those "None" values coming from? Use lots of words! I know you know it!
+# I went to PythonTutor and visualized the code. Still don't get why I'm getting the None value, cause, you know, I'm zpecial.
+# Asked for help in PythoTutor. The way to not get None is to replace print by return. Funtions use return statements. If there's no reture, there's no (None) output. (I'ts easy how one forgets basic stuff, of course I knew this, its just that the big picture overwhelms me)
 
 # ========================
 
@@ -15,7 +17,7 @@ leahString2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi or
 leahString3 = "* Im a Su Per WeirD ! $ St>ing :)"
 
 def validate_string(str):
-    pass
+    return str
 
 print(validate_string(leahString1))
 print(validate_string(leahString2))
@@ -34,7 +36,12 @@ string4 = "           "
 #Rewrite me, using these strings and annotate each line. Youll find your error quickly, I promise. 
 #Return true if a string contains 1 or more spaces, false if not.
 def contains_spaces(str):
-    return True
+    if ' ' in str:
+        return True
+    else:
+        return False
+# Is this correct? I feel like its the same I did last time. Maybe this time I'm using '_' correctly. 
+# ASKED FOR HELP IN PYTHONTUTOR AGAIN (these guys are amazing) --> '' is empry string. '_' is space. Got it! (again, it's so obvious, it slips away from my mind :S)
         
 string1spacecheck = contains_spaces(string1)
 print string1spacecheck
@@ -53,22 +60,22 @@ print string4spacecheck
 
 #TODO #4: Fill in reasoning
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me>
+##### WHY I SUCK FOR ASCII ART: spaces, spaces ain't cool. We need stuff that fills in, otherwise we don't get boxes, or triangles, or whatever.
 ##### badString1 = "T H I S H A S S P A C E S E V E R Y W H E R E"
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me, more words>
+##### WHY I SUCK FOR ASCII ART: There needs to be some kind of regularity, othewise we might get a box, but the art's gonna be icky, not regular.
 ##### badString2 = "I have too many different, irregular symbols, please imagine me"
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me, more words>
+##### WHY I SUCK FOR ASCII ART: This one and the weird shit I answered in our last class is the same answer. My mistake. I meant that as its not composed by ASCII characters, and we want to get ASCII art, then the string isn't valid.
 ##### badString3 = "I'm probably not ASCII"
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me, more words>
+##### WHY I SUCK FOR ASCII ART: lol. This one and the last one are the same.
 ##### badString4 = "I REFUSE TO COPY THAT ABSURDITY"
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me. I see you ignorin' me.>
+##### WHY I SUCK FOR ASCII ART: I'm a different type. I'm no string. I'n not valid.
 ##### badString4 = "TODO"
 
-##### WHY I SUCK FOR ASCII ART: <Answer Me. I see you ignorin' me.>
+##### WHY I SUCK FOR ASCII ART: <Answer Me. I see you ignorin' me. > I ran out of ideas! 
 ##### badString5 = "TODO"
 
 # ========================
@@ -78,7 +85,7 @@ print string4spacecheck
 imABoolean = True
 imAString = "True"
 
-def return_data_type(var):
+def return_data_type(var): #Question about this: here you are using a print statement. Why doesn't this function print none?
     print type(var)
     
 return_data_type(imABoolean)
